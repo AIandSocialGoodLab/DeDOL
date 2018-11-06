@@ -41,7 +41,7 @@ For more details of the algorithm, please refer to the original paper.
 - To collect the DQNs and run more DO iterations in global mode:
 
   - You should first run **DeDOL.py**  in all local modes.
-  - Run **Global_retrain.py**. Set the **load_path** parameter to be compatible with the **save_path** parameter you used in DeDOL.py to load the previous DQNs trained in local modes. The **save_path** parameter should omit the last number that specifying the mode, as it will auto collect all DQNs trained in all local loads. E.g if **save_path** is **./Results_33_random_mode0/** to  **./Results_33_random_mode3/** , the  **load_path** should be  **./Results_33_random_mode**. 
+  - Run **DeDOL_Global_retrain.py**. Set the **load_path** parameter to be compatible with the **save_path** parameter you used in DeDOL.py to load the previous DQNs trained in local modes. The **save_path** parameter should omit the last number that specifying the mode, as it will auto collect all DQNs trained in all local loads. E.g if **save_path** is **./Results_33_random_mode0/** to  **./Results_33_random_mode3/** , the  **load_path** should be  **./Results_33_random_mode**. 
 
 - To visualize the game process:
   - run GUI.py with arg 'load' set False will visualize the behaviour of a parameterized poacher and a random sweeping patroller. You can change parameters like 'row_num', 'map_type', 'max_time' for fun.
