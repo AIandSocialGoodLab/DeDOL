@@ -1,3 +1,7 @@
+## Source Code for the DeDOL algorithm proposed in 'Deep Reinforcement Learning for Green Security Games with Real-Time Information', AAAI 2019.
+
+For more details of the algorithm, please refer to the original paper.
+
 ### Pre-requsite
 
 - Tensorflow GPU     
@@ -24,20 +28,20 @@
 - replay_buffer.py: the replay buffer data structure needed for DQN training and prioterize experience replay
 - AC_patroller: the actor_critic patroller. Performs poor, not adopted in the DeDOL algorithm.
 
-**Most of the files include further detailed comments **
+**Most of the files include further detailed comments**
 
 ### How to run the DeDOL algorithm?
 
 - First run **DeDOL.py** for different local modes or pure global mode.
   - The default training parameters should work well. You can also explore by yourself. 
   - To run in different local modes, change the 'po_location' parameter from 0 to 3, representing four different entering points. The code will automatically generate new directors saving DQN models trained in different local modes, for later loading in the DeDOL_Global_Retrain.py file.
-  - E.g. the command 'python DeDOL.py --row_num 5 --po_location 0 --map_type gauss' will run the DeDOL algorithm in a 5x5 grid, Mixture Gaussian Map, and the poacher will always enter the grid world from the left-top corner. The trained DQNs will be stored in the director './Results_55_gauss_mode0/'.
+  - E.g. the command 'python DeDOL.py --row_num 5 --po_location 0 --map_type gauss' will run the DeDOL algorithm in a 5x5 grid, Mixture Gaussian Map, and the poacher will always enter the grid world from the left-top corner. The trained DQNs will be stored in the direct './Results_55_gauss_mode0/'.
   - The training of DQNs could really be time-consuming in the convoluted GSG-I game. And several iterations of DeDOL would be requried to evolve a resonalbe strategy profile. Be patient :).
   
 - To collect the DQNs and run more DO iterations in global mode:
 
   - You should first run **DeDOL.py**  in all local modes.
-  - Run **Global_retrain.py**. Set the **load_path** parameter to be compatible with the **save_path** parameter you used in DeDOL.py to load the previous DQNs trained in local modes. The **save_path** parameter should omit the last number that specifying the mode, as it will auto collect all DQNs trained in all local loads. E.g if **save_path** is **./Results_33_random_mode0/** to  **./3x3_random_mode3/** , the  **load_path** should be  **./3x3_random_mode**. 
+  - Run **Global_retrain.py**. Set the **load_path** parameter to be compatible with the **save_path** parameter you used in DeDOL.py to load the previous DQNs trained in local modes. The **save_path** parameter should omit the last number that specifying the mode, as it will auto collect all DQNs trained in all local loads. E.g if **save_path** is **./Results_33_random_mode0/** to  **./Results_33_random_mode3/** , the  **load_path** should be  **./Results_33_random_mode**. 
 
 - To visualize the game process:
   - run GUI.py with arg 'load' set False will visualize the behaviour of a parameterized poacher and a random sweeping patroller. You can change parameters like 'row_num', 'map_type', 'max_time' for fun.
