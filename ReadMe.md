@@ -1,6 +1,6 @@
 ## Source Code for the DeDOL algorithm proposed in 'Deep Reinforcement Learning for Green Security Games with Real-Time Information', AAAI 2019.
 
-For more details of the algorithm, please refer to the original paper.
+For more details of the algorithm, please refer to the original paper [Deep Reinforcement Learning for Green Security Games with Real-Time Information](https://arxiv.org/abs/1811.02483)
 
 ### Pre-requsite
 
