@@ -44,8 +44,8 @@ argparser.add_argument('--load', type=bool, default=False)
 
 
 # Environment
-argparser.add_argument('--row_num', type=int, default=3)
-argparser.add_argument('--column_num', type=int, default=3)
+argparser.add_argument('--row_num', type=int, default=7)
+argparser.add_argument('--column_num', type=int, default=7)
 argparser.add_argument('--ani_den_seed', type=int, default=66)
 
 # Patroller
