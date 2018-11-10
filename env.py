@@ -85,6 +85,7 @@ class Env(object):
 
         if self.gui:
             self.canvas.delete("all")
+            self.canvas['bg'] = 'white'
             self.make_grid()
             self.pa_ball = self.canvas.create_oval(self.pa_loc[1] * self.cell_length + self.quarter_cell,
                                                    self.pa_loc[0] * self.cell_length + self.quarter_cell,
