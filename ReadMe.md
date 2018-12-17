@@ -6,6 +6,7 @@ For more details of the algorithm, please refer to the original paper [Deep Rein
 
 - Tensorflow GPU     
 - cvxopt
+- nashpy
 
 ### Basic Description
 
@@ -13,10 +14,6 @@ For more details of the algorithm, please refer to the original paper [Deep Rein
 - DeDOL.py: the main file for running the DeDOL algorithms
 - DeDOL_util.py: helper functions for DO.py
 - DeDOL_Global_Retrain.py: for loading the models trained in local modes, and then run more iterations in gloabl mode training
-- Test_rulepatroller.py: perform grid search for the parameterized random walk patroller against a parameterized random walk poacher.
-- AnalyzeGridSearch.py: analyze the grid searching results after running Test_rulepatroller.py
-- cfr_exact_br_3x3.py: the file for 1) CFR algorithms or 2) compute the exact poacher/patroller best response in 3x3 games.
-- cfr_exact_br_util.py: helper functions for cfr_exact_br_3x3.py
 - GUI_util.py: helper functions for showing the game using GUI
 - GUI.py: test the performance of trained DQNs using GUI.
 - maps.py: helper functions for generate different kinds of maps
