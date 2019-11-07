@@ -21,7 +21,7 @@ For more details of the algorithm, please refer to the paper [Deep Reinforcement
 - poacher_cnn.py: the poacher CNN strategy representation
 - patroller_rule.py: our designed heuristic parameterized random walk patroller
 - poacher_rule.py:  our designed heuristic parameterized random walk patroller
-- patroller_randomsweeping.py: our desinged heuristic random sweeping patroller
+- patroller_randomsweeping.py: our designed heuristic random sweeping patroller
 - replay_buffer.py: the replay buffer data structure needed for DQN training and prioterize experience replay
 - AC_patroller: the actor_critic patroller. Performs poor, not adopted in the DeDOL algorithm.
 
